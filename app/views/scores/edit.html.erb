@@ -1,0 +1,14 @@
+<h1>Editing score</h1>
+
+<%= render "form", score: @score %>
+
+<br>
+
+<div>
+  <%= link_to "Show this score", @score %> |
+  <% if(session[:from]=='index')%>
+    <%= link_to "Back to scores", scores_path %>
+  <%else%>
+  <%= link_to "Back to scores", "/students/#{session[:id]}/edit_score" %>
+  <% end%>
+</div>
